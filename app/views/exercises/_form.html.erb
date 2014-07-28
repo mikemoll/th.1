@@ -1,0 +1,17 @@
+<%= simple_form_for(@exercise) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :exercise_performed %>
+    <%= f.input :load_prescribed %>
+    <%= f.input :sets_perscribed %>
+    <%= f.input :reps_perscribed %>
+    <%= f.input :set_one_actual %>
+    <%= f.input :set_two_actual %>
+    <%= f.input :set_three_actual %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Exercise performed:</strong>
+  <%= @exercise.exercise_performed %>
+</p>
+
+<p>
+  <strong>Load prescribed:</strong>
+  <%= @exercise.load_prescribed %>
+</p>
+
+<p>
+  <strong>Sets perscribed:</strong>
+  <%= @exercise.sets_perscribed %>
+</p>
+
+<p>
+  <strong>Reps perscribed:</strong>
+  <%= @exercise.reps_perscribed %>
+</p>
+
+<p>
+  <strong>Set one actual:</strong>
+  <%= @exercise.set_one_actual %>
+</p>
+
+<p>
+  <strong>Set two actual:</strong>
+  <%= @exercise.set_two_actual %>
+</p>
+
+<p>
+  <strong>Set three actual:</strong>
+  <%= @exercise.set_three_actual %>
+</p>
+
+<%= link_to 'Edit', edit_exercise_path(@exercise) %> |
+<%= link_to 'Back', exercises_path %>

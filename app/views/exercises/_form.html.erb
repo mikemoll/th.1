@@ -1,17 +1,52 @@
-<%= simple_form_for(@exercise) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :exercise_performed %>
-    <%= f.input :load_prescribed %>
-    <%= f.input :sets_perscribed %>
-    <%= f.input :reps_perscribed %>
-    <%= f.input :set_one_actual %>
-    <%= f.input :set_two_actual %>
-    <%= f.input :set_three_actual %>
+<%= form_for @exercise, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :exercise_performed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :exercise_performed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :load_prescribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :load_prescribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :sets_perscribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :sets_perscribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :reps_perscribed, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :reps_perscribed, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :set_one_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :set_one_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :set_two_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :set_two_actual, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :set_three_actual, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.number_field :set_three_actual, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  exercises_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
